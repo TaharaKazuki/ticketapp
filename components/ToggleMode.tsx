@@ -25,4 +25,6 @@ const ToggleMode = () => {
   );
 };
 
-export default dynamic(() => Promise.resolve(ToggleMode), { ssr: false });
+export default dynamic(() => Promise.resolve(ToggleMode), {
+  ssr: false,
+});
