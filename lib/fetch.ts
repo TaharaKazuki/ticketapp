@@ -1,4 +1,4 @@
-const END_POINT = process.env.API_URL;
+const END_POINT = process.env.NEXT_PUBLIC_API_URL;
 
 export const postData = async (url = '', data = {}) => {
   const response = await fetch(`${END_POINT}/${url}`, {
@@ -13,8 +13,6 @@ export const postData = async (url = '', data = {}) => {
 };
 
 export const patchData = async (url = '', data = {}) => {
-  console.info(`${END_POINT}/${url}`);
-
   const response = await fetch(`${END_POINT}/${url}`, {
     method: 'PATCH',
     cache: 'no-store',
