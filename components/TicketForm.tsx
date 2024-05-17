@@ -43,11 +43,9 @@ const TicketForm = ({ ticket }: Props) => {
       setError('');
 
       if (ticket) {
-        const data = await postData(`tickets/${ticket.id}`, values);
-        console.info('post return data', data);
+        const data = await patchData(`tickets/${ticket.id}`, values);
       } else {
-        const data = await patchData(`tickets`, values);
-        console.info('patch return Data', data);
+        const data = await postData(`tickets`, values);
       }
       setIsSubmitting(false);
       router.push('/tickets');
