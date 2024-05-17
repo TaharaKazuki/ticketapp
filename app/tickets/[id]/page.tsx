@@ -1,4 +1,5 @@
 import prisma from '@/prisma/db';
+import TicketDetail from './TicketDetail';
 type Props = {
   params: { id: string };
 };
@@ -12,7 +13,7 @@ const ViewTicket = async ({ params }: Props) => {
     return <p className="text-destructive">Ticket Not Found</p>;
   }
 
-  return <div>ViewTicket</div>;
+  return <TicketDetail ticket={ticket} />;
 };
 
 export default ViewTicket;
