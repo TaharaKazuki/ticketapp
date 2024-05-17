@@ -1,7 +1,7 @@
 import prisma from '@/prisma/db';
 import DataTable from './DataTable';
 import Link from 'next/link';
-import { Button, buttonVariants } from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 
 const Tickets = async () => {
   const tickets = await prisma.ticket.findMany();
