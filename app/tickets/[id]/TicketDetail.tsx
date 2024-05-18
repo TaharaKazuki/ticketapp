@@ -41,6 +41,17 @@ const TicketDetail = ({ ticket }: Props) => {
         <CardContent className="prose dark:prose-invest">
           <ReactMarkdown>{ticket.description}</ReactMarkdown>
         </CardContent>
+        <CardFooter>
+          Created:{' '}
+          {ticket.createdAt.toLocaleDateString('jp-JP', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: 'numeric',
+            minute: '2-digit',
+            hour12: true,
+          })}
+        </CardFooter>
       </Card>
     </div>
   );
