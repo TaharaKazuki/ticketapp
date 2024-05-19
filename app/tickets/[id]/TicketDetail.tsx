@@ -42,8 +42,8 @@ const TicketDetail = ({ ticket }: Props) => {
           <ReactMarkdown>{ticket.description}</ReactMarkdown>
         </CardContent>
         <CardFooter>
-          Created:{' '}
-          {ticket.createdAt.toLocaleDateString('jp-JP', {
+          Updated:{' '}
+          {ticket.updatedAt.toLocaleDateString('jp-JP', {
             year: 'numeric',
             month: '2-digit',
             day: '2-digit',
@@ -53,6 +53,7 @@ const TicketDetail = ({ ticket }: Props) => {
           })}
         </CardFooter>
       </Card>
+      <div className="mx-4 flex lg:flex-col lg:mx-0 gap-2"></div>
     </div>
   );
 };
